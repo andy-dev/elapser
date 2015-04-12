@@ -1,8 +1,8 @@
 require "elapser/version"
 
 module Elapser
-  class Elapsed
-    def self.time_calc(created_at)
+
+    def time_calc(created_at)
 
       time_now = Time.now.to_i
       time_reference = DateTime.parse(created_at).strftime('%s').to_i
@@ -22,5 +22,5 @@ module Elapser
         else ((elapsed_time+180000)/(60*60*24*7)).to_i.to_s+' weeks ago'
       end
     end
-  end
 end
+
