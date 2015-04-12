@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Elapser::VERSION
   spec.authors       = ["andy-dev"]
   spec.email         = ["andres.macedo@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Gem that provides time between now and when something was created using the column created_at that is added when using timestamps macro in an Active Record migration}
+  spec.description   = %q{When creating apps, you might find it handy to see how long ago was something created. For example, if you are builing a simple ToDo application, you might want to display how long ago did a particular todo was added to the list}
+  spec.homepage      = "https://github.com/andy-dev/elapser"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency 'rspec' #Development dependencies are ignored at runtime
 end
