@@ -20,20 +20,49 @@ Or install it yourself as:
 
 ## Usage
 
-###DbcFaker::Name
------
-
-1. Add elapser your gemfile --- gem 'elapser', '~> 1.0.0'
-2. Require elapser --- require 'elapser'
-3. Use it!!!
-   Elapser.time_calc("2015-02-13 00:36:46 UTC")
+Add elapser to your gemfile
 ```ruby
-   #=> 9 weeks ago # Consider this was posted 2015-04-13
+gem 'elapser', '~> 1.0.0'
 ```
-4. Note: If you are using created_at from active record, make sure you call to_s
-   For Example: Elapser.time_calc(todo.created_at.to_s)
-   # todo is just the name of my model it could be anything
+Require elapser 
 
+```ruby
+require 'elapser'
+```
+
+3. Use it!!!
+   
+```ruby
+   Elapser.time_calc("2015-02-13 00:36:46 UTC")
+   #=> 9 weeks ago 
+   #Consider this example was posted 2015-04-13
+```
+ Note: If you are using created_at from active record, make sure you call to_s, for example: 
+
+```ruby
+    Elapser.time_calc(todo.created_at.to_s)
+   # todo is just the name of my model it could be anything
+```
+ Example using ERB
+```ruby 
+    #@note is equal to all notes in my db (@note=Note.all)
+    #@note is passed as an instance variable in our get route
+    
+    <% @note.reverse.each do |note| %>
+      <ul>
+        <li> Created by: <%= note.user.user_name if note.user != nil %></li>
+        <li> <%= note.description %></li>
+        <li>Posted <%= Elapser.time_calc(note.created_at.to_s)%></li>
+      </ul>
+     <%end%>
+```
+```ruby 
+# DISPLAY ON THE BROWSER
+* Created by: andres
+* hello again
+* Posted 8 weeks ago
+```
+      
 ## Contributing
 
 1. Fork it
