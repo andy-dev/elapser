@@ -49,9 +49,9 @@ require 'elapser'
     
     <% @note.reverse.each do |note| %>
       <ul>
-      <li> Created by: <%= note.user.user_name if note.user != nil %></li>
-      <li> <%= note.description %></li>
-      <li>Posted <%= Elapser.time_calc(note.created_at.to_s)%></li>
+        <li> Created by: <%= note.user.user_name if note.user != nil %></li>
+        <li> <%= note.description %></li>
+        <li>Posted <%= Elapser.time_calc(note.created_at.to_s)%></li>
       </ul>
      <%end%>
 ```
