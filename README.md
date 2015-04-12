@@ -44,18 +44,22 @@ require 'elapser'
 ```
  Example using ERB
 ```ruby 
-  <% @note.reverse.each do |note| %>
-      <div class = "notebox">
+    #@note is equal to all notes in my db (@note=Note.all)
+    #@note is passed as an instance variable in our get route
+    
+    <% @note.reverse.each do |note| %>
+      <ul>
       <li> Created by: <%= note.user.user_name if note.user != nil %></li>
       <li> <%= note.description %></li>
       <li>Posted <%= Elapser.time_calc(note.created_at.to_s)%></li>
-      <%end%>
+      </ul>
+     <%end%>
 ```
 ```ruby 
-DISPLAY ON THE BROWSER
-Created by: andres
-hello again
-Posted 8 weeks ago
+# DISPLAY ON THE BROWSER
+* Created by: andres
+* hello again
+* Posted 8 weeks ago
 ```
       
 ## Contributing
