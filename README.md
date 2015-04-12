@@ -20,7 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Add elapser your gemfile --- gem 'elapser', '~> 1.0.0'
+2. Require elapser --- require 'elapser'
+3. Use it!!!
+   Elapser.time_calc("2015-02-13 00:36:46 UTC")
+   => 9 weeks ago # Consider this was posted 2015-04-13
+
+4. Note: If you are using created_at from active record, make sure you call to_s
+   For Example: Elapser.time_calc(todo.created_at.to_s)
+   # todo is just the name of my model it could be anything
 
 ## Contributing
 
