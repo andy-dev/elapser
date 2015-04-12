@@ -2,7 +2,7 @@ require "elapser/version"
 
 module Elapser
 
-    def time_calc(created_at)
+    def self.time_calc(created_at)
 
       time_now = Time.now.to_i
       time_reference = DateTime.parse(created_at).strftime('%s').to_i
