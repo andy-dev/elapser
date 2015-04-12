@@ -20,9 +20,6 @@ Or install it yourself as:
 
 ## Usage
 
-###DbcFaker::Name
------
-
 Add elapser your gemfile
 ```ruby
 gem 'elapser', '~> 1.0.0'
@@ -45,7 +42,22 @@ require 'elapser'
     Elapser.time_calc(todo.created_at.to_s)
    # todo is just the name of my model it could be anything
 ```
-
+ Example using ERB
+```ruby 
+  <% @note.reverse.each do |note| %>
+      <div class = "notebox">
+      <li> Created by: <%= note.user.user_name if note.user != nil %></li>
+      <li> <%= note.description %></li>
+      <li>Posted <%= Elapser.time_calc(note.created_at.to_s)%></li>
+      <%end%>
+```
+```ruby 
+DISPLAY ON THE BROWSER
+Created by: andres
+hello again
+Posted 8 weeks ago
+```
+      
 ## Contributing
 
 1. Fork it
