@@ -23,8 +23,16 @@ Or install it yourself as:
 ###DbcFaker::Name
 -----
 
-1. Add elapser your gemfile --- gem 'elapser', '~> 1.0.0'
-2. Require elapser --- require 'elapser'
+Add elapser your gemfile
+```ruby
+gem 'elapser', '~> 1.0.0'
+```
+Require elapser 
+
+```ruby
+require 'elapser'
+```
+
 3. Use it!!!
    
 ```ruby
