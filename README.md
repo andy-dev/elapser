@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Add elapser your gemfile
+Add elapser to your gemfile
 ```ruby
 gem 'elapser', '~> 1.0.0'
 ```
@@ -34,7 +34,8 @@ require 'elapser'
    
 ```ruby
    Elapser.time_calc("2015-02-13 00:36:46 UTC")
-   #=> 9 weeks ago # Consider this was posted 2015-04-13
+   #=> 9 weeks ago 
+   #Consider this example was posted 2015-04-13
 ```
  Note: If you are using created_at from active record, make sure you call to_s, for example: 
 
