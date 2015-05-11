@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Add elapser to your gemfile
 ```ruby
-gem 'elapser', '~> 1.0.0'
+gem 'elapser', '~> 1.0.1'
 ```
 Require elapser 
 
